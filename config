@@ -1,0 +1,33 @@
+general {
+    colors = true
+    interval = 5
+    output_format = "i3bar"
+}
+
+order += "cpu"
+order += "memory"
+order += "disk /"
+order += "battery"
+order += "time"
+
+cpu {
+    format = "CPU: %usage%%"
+}
+
+memory {
+    format = "RAM: %used%%"
+}
+
+disk "/" {
+    format = "Disk: %avail%"
+}
+
+battery 0 {
+    format = "Battery: %status %percentage%%"
+}
+
+time {
+    format = "%Y-%m-%d %H:%M:%S"
+    timezone = ""
+    utc = false
+}
