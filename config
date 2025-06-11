@@ -4,15 +4,10 @@ general {
     output_format = "i3bar"
 }
 
-order += "load"
 order += "memory"
 order += "disk /"
 order += "battery 0"
 order += "time"
-
-load {
-    format = "CPU (1 min): %1min"
-}
 
 memory {
     format = "RAM: %used"
