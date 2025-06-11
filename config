@@ -4,30 +4,29 @@ general {
     output_format = "i3bar"
 }
 
-order += "cpu"
+order += "load"
 order += "memory"
 order += "disk /"
-order += "battery"
+order += "battery 0"
 order += "time"
 
-cpu {
-    format = "CPU: %usage%%"
+load {
+    format = "CPU (1 min): %1min"
 }
 
 memory {
-    format = "RAM: %used%%"
+    format = "RAM: %used"
 }
 
 disk "/" {
-    format = "Disk: %avail%"
+    format = "Disk: %avail"
 }
 
 battery 0 {
-    format = "Battery: %status %percentage%%"
+    format = "Battery: %status %percentage"
+    last_full_capacity = true
 }
 
 time {
     format = "%d-%m-%Y %H:%M:%S"
-    timezone = ""
-    utc = false
 }
