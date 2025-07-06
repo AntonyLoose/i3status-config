@@ -1,5 +1,8 @@
 general {
     colors = true
+    color_good = "#a3be8c"
+    color_bad  = "#bf616a"
+    color_degraded = "#ebcb8b"
     interval = 5
     output_format = "i3bar"
 }
@@ -7,6 +10,8 @@ general {
 order += "memory"
 order += "disk /"
 order += "battery 0"
+order += "ethernet enp42s0"
+order += "wireless __first__"
 order += "time"
 
 memory {
@@ -20,6 +25,16 @@ disk "/" {
 battery 0 {
     format = "Battery: %status %percentage"
     last_full_capacity = true
+}
+
+ethernet enp42s0 {
+  format_up = "ETH: %ip (%speed)"
+  format_down = "ETH: down"
+}
+
+wireless __first__ {
+  format_up = "WLS: (%quality at %ssid) %ip"
+  format_down  = "WLS: down"
 }
 
 time {
