@@ -11,7 +11,6 @@ order += "memory"
 order += "disk /"
 order += "battery 0"
 order += "ethernet enp42s0"
-order += "wireless __first__"
 order += "time"
 
 memory {
@@ -30,11 +29,6 @@ battery 0 {
 ethernet enp42s0 {
   format_up = "ETH: %ip (%speed)"
   format_down = "ETH: down"
-}
-
-wireless __first__ {
-  format_up = "WLS: (%quality at %ssid) %ip"
-  format_down  = "WLS: down"
 }
 
 time {
